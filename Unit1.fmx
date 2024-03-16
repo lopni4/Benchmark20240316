@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'fps'
+  ClientHeight = 1080
+  ClientWidth = 1920
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Timer: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerTimer
+    Left = 392
+    Top = 224
+  end
+  object Edit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Text = 'The number of characters'
+    TextSettings.Font.Family = 'Lucida Sans Typewriter'
+    TextSettings.Font.Size = 50.000000000000000000
+    TextSettings.FontColor = claNavy
+    Position.X = 120.000000000000000000
+    Position.Y = 56.000000000000000000
+    Hint = 
+      'Please enter the number of characters to start the animation. Fo' +
+      'r exit please press Alt+F4'
+    Size.Width = 897.000000000000000000
+    Size.Height = 137.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Style]
+  end
+  object ExitButton: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 33.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'escapetoolbutton'
+    TabOrder = 2
+    Text = 'ExitButton'
+    Visible = False
+    OnClick = ExitButtonClick
+  end
+  object fpsLabel: TLabel
+    Position.X = 112.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 3
+  end
+  object EditButton: TButton
+    StyledSettings = [Style]
+    Position.X = 1025.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 137.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Go'
+    TextSettings.Font.Family = 'Lucida Sans Typewriter'
+    TextSettings.Font.Size = 50.000000000000000000
+    TextSettings.FontColor = claNavy
+    OnClick = EditButtonClick
+  end
+  object p: TPaintBox
+    Size.Width = 1920.000000000000000000
+    Size.Height = 1080.000000000000000000
+    Size.PlatformDefault = False
+  end
+end
